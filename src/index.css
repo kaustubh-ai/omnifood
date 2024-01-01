@@ -1,0 +1,62 @@
+@font-face {
+	font-display: swap;
+	font-family: 'rubik-400';
+	src: url('./assets/fonts/rubik/rubik-400.woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'rubik-500';
+	src: url('./assets/fonts/rubik/rubik-500.woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'rubik-600';
+	src: url('./assets/fonts/rubik/rubik-600.woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'rubik-700';
+	src: url('./assets/fonts/rubik/rubik-700.woff2');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-family: Rubik-400, system-ui, sans-serif;
+		/*font-size: calc(6px + (16 - 6) * ((100vw - 300px) / (1280 - 300)));*/
+		
+		/* 1280px */
+		@media (max-width: 80em) {
+			font-size: calc(6px + (16 - 6) * ((100vw - 300px) / (1536 - 300)));
+		}
+		
+		/* 800 */
+		/*@media (max-width: 50em) {*/
+		/*	font-size: 10px;*/
+		/*}*/
+		
+		 /*600 */
+		/*@media (max-width: 37.5em) {*/
+		/*	font-size: 8px;*/
+		/*}*/
+		
+		/* 300px */
+		@media (max-width: 18.75em) {
+			font-size: 6px;
+		}
+	}
+	
+	input[type='number']::-webkit-outer-spin-button,
+	input[type='number']::-webkit-inner-spin-button,
+	input[type='number'] {
+		-webkit-appearance: none;
+		margin: 0;
+		-moz-appearance: textfield !important;
+	}
+}
